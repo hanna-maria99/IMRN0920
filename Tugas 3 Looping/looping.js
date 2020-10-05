@@ -30,14 +30,14 @@ for(var angkaGjp=1; angkaGjp <=20; angkaGjp++){
     }else if((angkaGjp%2)===0){
         console.log(angkaGjp + ' - Berkualitas');
      }else if((kelipatanGjl%3)==0){
-     //   console.log(kelipatanGjl + ' - I Love Coding')
+      //  console.log(kelipatanGjl + ' - I Love Coding')
     }
 }
 
 //No. 3 Membuat Persegi
 var hasil1="";
 
-for(var i=0; i<=4 ; i++){
+for(var i=0; i<=3 ; i++){
     for(var j=0; j<8; j++){
        if(i==0){
            hasil1+= "#"
@@ -76,3 +76,20 @@ for(var catur1=0; catur1<8; catur1++){
     }console.log(hasil5)
 
     
+
+//Jawaban nomor 2
+var sans = "- Santai"
+var qual = "- Berkualitas"
+var love = "- I Love Coding"
+
+for(i=1; i<=20; i++){
+    if(i%2 !=1){
+        console.log(i + qual);
+    }else if(i%3 ==0){
+        console.log(i + love)
+    }else{
+        console.log(i+sans)
+    }
+}
+
+//
