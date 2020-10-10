@@ -22,3 +22,17 @@ function baca(){
     }
 baca();
 
+//Jawaban
+let t=10000;
+let i=0;
+
+function panggil(){
+    readBooks(t, books[i], function(sisaWaktu){
+        t=sisaWaktu
+        i++
+        if(i < books.length)
+        panggil()
+    })
+}
+panggil()
+

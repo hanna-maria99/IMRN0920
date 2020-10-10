@@ -25,3 +25,18 @@ function introduce(){
 }
 var kenalan = introduce();
 console.log("Nama saya " + name + ", umur saya " + age + ", alamat saya di "+ address + ", dan saya punya hobby yaitu "+ hobby+ "!");
+
+
+
+//Mini quiz 
+// //soal: 
+// var panjang = 29;
+// var lebar = 12;
+// var tinggi = 8;
+// total = panjang*lebar*tinggi
+// console.log(total)
+//jawaban:
+function volume(panjang, lebar, tinggi){
+    hasil = panjang * lebar * tinggi
+    console.log(hasil)
+}volume(29,12,8)

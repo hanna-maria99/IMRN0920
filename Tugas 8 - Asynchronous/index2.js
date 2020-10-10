@@ -18,3 +18,21 @@ function readBooksPromise(){
         })
 }
 readBooksPromise()
+
+
+//jawaban :
+async function asyncCall(){
+    let t = 10000;
+    for(let i =0; i< books.length;i++){
+        t = await readBooksPromise(t, books[i])
+        .then(function (sisaWaktu)
+        {
+            return sisaWaktu;
+        })
+        .catch(function(sisaWaktu){
+            return sisaWaktu;
+        })
+    }
+    console.log("selesai")
+}
+asyncCall();

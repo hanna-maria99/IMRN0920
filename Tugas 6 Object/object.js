@@ -75,8 +75,6 @@ function arrayToObject(arr) {
          }
     }console.log(nama,objek)
 }
-console.log(arrayToObject());
-
 //no. 2 Shopping Time
 var tokoX={
     Stacattu:1500000,
@@ -106,15 +104,15 @@ function shoppingTime(memberId, money) {
         console.log("Mohon maaf, toko X hanya berlaku untuk member saja")
     }else if(memberId == member.memberId[0-3] || member.money < money){
         console.log("Mohon maaf, uang tidak cukup")
-    }else if(memberId == member.memberId[0]){
-        for(var i; i<tokoX; i++){
-            belanja[memberId]+=memberId[0]
-            belanja[money]+=member.money[0],
-            listPurchased+= [tokoX.Stacattu]
+    }else if(memberId == "1820RzKrnWn08" || member.money.money[1]==total){
+        var total= tokoX.Stacattu+ tokoX.Zoro+ tokoX.HnN +tokoX.Uniklooh + tokoX.caseHp
+        for(var i=0; i<total.sum; i++){
+            listPurchased[i]+= barang.namaBarang.namaBrg[0]
         }
-    }return belanja;
+
+    }return listPurchased;
 }
-   
+
   // TEST CASES
   console.log(shoppingTime('1820RzKrnWn08', 2475000));
     //{ memberId: '1820RzKrnWn08',
@@ -175,3 +173,4 @@ function shoppingTime(memberId, money) {
   //   { penumpang: 'Icha', naikDari: 'A', tujuan: 'B', bayar: 2000 } ]
    
   console.log(naikAngkot([])); //[]
+

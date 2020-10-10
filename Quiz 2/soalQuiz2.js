@@ -81,10 +81,10 @@ const recapScore=(data)=>{
         var email = [i] + "Email: " + data[i][0]
         var avgScore = "Rata-rata: " + data[i][1]
         var pred = "Predikat: " + predikat
-     }
-   
-    console.log(email)
-    console.log(avgScore)
-    console.log(pred)
+
+        console.log(email)
+        console.log(avgScore)
+        console.log(pred)
+     }  
 }   
-return recapScore();
+recapScore(data);

@@ -11,7 +11,6 @@ while(genap < 20){
 
 // console.log("LOOPING KEDUA");
 var angka = 22;
-
 while(angka > 2 ){
     angka-=2;
     console.log( angka + "- I will become a mobile developer")
@@ -29,7 +28,7 @@ for(var angkaGjp=1; angkaGjp <=20; angkaGjp++){
         console.log(angkaGjp + ' - Santai');
     }else if((angkaGjp%2)===0){
         console.log(angkaGjp + ' - Berkualitas');
-     }else if((kelipatanGjl%3)==0){
+    }else if((kelipatanGjl%3)==0){
       //  console.log(kelipatanGjl + ' - I Love Coding')
     }
 }
@@ -38,7 +37,7 @@ for(var angkaGjp=1; angkaGjp <=20; angkaGjp++){
 var hasil1="";
 
 for(var i=0; i<=3 ; i++){
-    for(var j=0; j<8; j++){
+    for(var j=0; j<=8; j++){
        if(i==0){
            hasil1+= "#"
        }
@@ -92,4 +91,65 @@ for(i=1; i<=20; i++){
     }
 }
 
-//
+//Jawaban nomor 3 
+var i=1;
+var j=1;
+var panjang=8;
+var lebar =4;
+var pagar ="";
+
+while(j<=lebar){
+    while(i<=panjang){
+        pagar += "#"
+        i++
+    }
+    console.log(pagar);
+    pagar='';
+    i=1;
+    j++;
+}
+
+//Jawaban nomor 4
+i = 1;
+j = 1;
+var alas= 7;
+var tinggi = 7;
+var pagar="";
+
+for(i=1; i<= tinggi; i++){
+    for(j=1; j<= i; j++){
+        pagar+= "#";
+    }
+    console.log(pagar)
+    pagar+="";
+}
+
+//Jawaban nomor 5
+i=1;
+j=1;
+var panjang =8;
+var lebar=8;
+var papan="";
+
+for(j=1; j<=lebar;j++){
+    if(j%2==1){
+        for(i=1;i<=panjang;i++){
+            if(i%2==1){
+                papan+=" "
+            }else{
+                papan+="#"
+            }
+        }
+    }else{
+        for(i=1; i>=panjang; i++){
+            if(i%2==1){
+                papan+="#"
+            }else{
+                papan+=" "
+            }
+        }
+    }console.log(papan);
+    papan="";
+}
+
+
