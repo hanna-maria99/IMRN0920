@@ -55,7 +55,6 @@
 // console.log(viewScores(data, "quiz-3"))
 
 //no. 3 Recap Score
-
 var data = [
     ["abduh@mail.com", 85.7],
     ["khairun@mail.com", 89.3],
@@ -64,20 +63,21 @@ var data = [
 ] 
 
 const recapScore=(data)=>{
-     for(var i=0; i< data.length;i++){
+    var datas = data.length;
+     for(var i=0; i< datas ;i++){
         var nilai = data[i][1];
         var predikat='';
 
         if(nilai > 70){
-            return predikat= "participant"
+            predikat= "participant"
         }
         else if(nilai > 80){
-            return predikat = "graduate"
+            predikat = "graduate"
         }
         else if(nilai > 90){
-            return predikat = "honour"
+            predikat = "honour"
         }   
-        
+
         var email = [i] + "Email: " + data[i][0]
         var avgScore = "Rata-rata: " + data[i][1]
         var pred = "Predikat: " + predikat
