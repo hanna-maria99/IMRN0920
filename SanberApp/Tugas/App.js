@@ -4,64 +4,70 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import VideoItem from './Tugas12/videoItems';
 import data from './data.json';
 
+import LoginScreen from './Tugas13/LoginScreen';
+import AboutScreen from './Tugas13/AboutScreen';
+
 export default class App extends Component{
     render(){
         return(
-            <View style={styles.container}>
-               <View style={styles.navigationBar}>
-                    <Image 
-                    style={styles.logo}
-                    source={require('./Tugas12/Images/logo.png')}/>
+            // <View style={styles.container}>
+            //    <View style={styles.navigationBar}>
+            //         <Image 
+            //         style={styles.logo}
+            //         source={require('./Tugas12/Images/logo.png')}/>
              
 
-               <View style={styles.rightNav}>
-                   <TouchableOpacity>
-                        <Icon name='search'
-                        size={25}
-                        style={styles.navIcon}/>
-                   </TouchableOpacity>
-                   <TouchableOpacity>
-                        <Icon name='account-circle'
-                        size={25}
-                        style={styles.navIcon}/>
-                   </TouchableOpacity>
-               </View>
-            </View>
+            //    <View style={styles.rightNav}>
+            //        <TouchableOpacity>
+            //             <Icon name='search'
+            //             size={25}
+            //             style={styles.navIcon}/>
+            //        </TouchableOpacity>
+            //        <TouchableOpacity>
+            //             <Icon name='account-circle'
+            //             size={25}
+            //             style={styles.navIcon}/>
+            //        </TouchableOpacity>
+            //    </View>
+            // </View>
 
-                <View style={styles.body}>                   
-                    <FlatList
-                        data={data.items}
-                        renderItem={(video)=>
-                            <VideoItem video={video.item} />}
-                        keyExtractor={(item)=>item.id}
-                        ItemSeparatorComponent={()=>
-                            <View style={{height:0.5,backgroundColor:'#E5E5E5'}}/>}
-                    />
-                </View>
+            //     <View style={styles.body}>                   
+            //         <FlatList
+            //             data={data.items}
+            //             renderItem={(video)=>
+            //                 <VideoItem video={video.item} />}
+            //             keyExtractor={(item)=>item.id}
+            //             ItemSeparatorComponent={()=>
+            //                 <View style={{height:0.5,backgroundColor:'#E5E5E5'}}/>}
+            //         />
+            //     </View>
 
-                <View style={styles.tabBar}>
-                    <TouchableOpacity style={styles.isiTab}>
-                        <Icon name='home'
-                        size={25}/>
-                        <Text> Home</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.isiTab}>
-                        <Icon name='whatshot'
-                        size={25}/>                        
-                        <Text> Trending</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.isiTab}>
-                        <Icon name='subscriptions'
-                        size={25}/>
-                        <Text> Subscriptions </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.isiTab}>
-                        <Icon name='folder'
-                        size={25}/>
-                        <Text> Library </Text>
-                    </TouchableOpacity>
-                </View>
-            </View>
+            //     <View style={styles.tabBar}>
+            //         <TouchableOpacity style={styles.isiTab}>
+            //             <Icon name='home'
+            //             size={25}/>
+            //             <Text> Home</Text>
+            //         </TouchableOpacity>
+            //         <TouchableOpacity style={styles.isiTab}>
+            //             <Icon name='whatshot'
+            //             size={25}/>                        
+            //             <Text> Trending</Text>
+            //         </TouchableOpacity>
+            //         <TouchableOpacity style={styles.isiTab}>
+            //             <Icon name='subscriptions'
+            //             size={25}/>
+            //             <Text> Subscriptions </Text>
+            //         </TouchableOpacity>
+            //         <TouchableOpacity style={styles.isiTab}>
+            //             <Icon name='folder'
+            //             size={25}/>
+            //             <Text> Library </Text>
+            //         </TouchableOpacity>
+            //     </View>
+            // </View>
+        
+            //<LoginScreen/>
+            <AboutScreen/>
         )
     }
 }
