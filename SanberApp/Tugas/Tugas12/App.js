@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, FlatList, Image, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
-import VideoItem from './Tugas12/videoItems';
-import data from './data.json';
+import VideoItem from './videoItems';
+import data from '../data.json';
 
-import LoginScreen from './Tugas13/LoginScreen';
-import AboutScreen from './Tugas13/AboutScreen';
+import LoginScreen from '../Tugas13/LoginScreen';
+import AboutScreen from '../Tugas13/AboutScreen';
 
 export default class App extends Component{
     render(){
