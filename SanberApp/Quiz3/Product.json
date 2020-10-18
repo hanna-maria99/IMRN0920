@@ -1,0 +1,23 @@
+{
+    "items":[
+      {
+        "id": 1,
+        "productName": "Tiare Handwash",
+        "price": "$12.22",
+        "imgProd":"file:///C:/Users/user/Documents/GitHub/IMRN0920/SanberApp/Quiz3/img/sabun.png"
+      },
+      {
+        "id": 2,
+        "productName": "JBL Speaker",
+        "price": "$12.22",
+        "imgProd":"speaker.png"
+      },
+      {
+        "id": 3,
+        "productName": "Google Home",
+        "price": "$80.30",
+        "imgProd":"speaker2.png"
+      }
+    ]
+  }
+  

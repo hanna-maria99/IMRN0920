@@ -14,7 +14,7 @@ export default class LoginScreen extends Component{
                 <View style={styles.Title}>
                     <Text
                      style={styles.isiTitle}>
-                        Login</Text>
+                        Login </Text>
                 </View>
 
                 <View style={styles.formLogin}>
