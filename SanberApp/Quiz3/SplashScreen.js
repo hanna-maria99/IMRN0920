@@ -11,7 +11,7 @@ export default class SplashScreen extends Component{
         return new Promise((resolve)=>
         setTimeout(
             ()=>{resolve('result')},
-            3000
+            5000
             )
         )
     }

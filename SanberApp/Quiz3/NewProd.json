@@ -4,13 +4,13 @@
         "id": 4,
         "productName": "Nike Running",
         "price": "$30.00",
-        "imgProd":"./Quiz3/img/sepatu.png"
+        "imgProd":"./img/sepatu.png"
       },
       {
         "id": 5,
         "productName": "White Chair",
         "price": "$25.25",
-        "imgProd":"./Quiz3/img/kursi.png"
+        "imgProd":"./img/kursi.png"
       }
     ]
 }
