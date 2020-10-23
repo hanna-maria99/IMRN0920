@@ -54,8 +54,8 @@ const MainStackScreen=()=>(
 
 const HomeStackScreen=()=>(
     <HomeStack.Navigator>
-        <HomeStack.Screen name='Detail' component={DetailScreen}/>
         <HomeStack.Screen name='tabDash' component={TabDash}/>
+        <HomeStack.Screen name='Detail' component={DetailScreen}/>
     </HomeStack.Navigator>
 )
 
