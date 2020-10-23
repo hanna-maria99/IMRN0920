@@ -10,9 +10,7 @@ import Dashboard from '../Screen/Dashboard';
 import AboutScreen from '../Screen/About';
 import DetailScreen from '../Screen/Detail';
 import SplashScreen from '../Screen/SplashScreen';
-import Login from '../Screen/Login';
 import TabDash from '../Screen/TabDash';
-
 
 const AuthStack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -55,7 +53,7 @@ const MainStackScreen=()=>(
 const HomeStackScreen=()=>(
     <HomeStack.Navigator>
         <HomeStack.Screen name='tabDash' component={TabDash}/>
-        <HomeStack.Screen name='Detail' component={DetailScreen}/>
+        {/* <HomeStack.Screen name='Detail' component={DetailScreen}/> */}
     </HomeStack.Navigator>
 )
 
@@ -71,8 +69,15 @@ const BottomTabScreen=()=>(
                 ? 'md-home'
                 : 'md-home-outline';
             } else if (route.name === 'About Us') {
-                iconName = focused ? 'md-information-circle' : 'md-information-circle-outline';
+                iconName = focused 
+                ? 'md-information-circle' 
+                : 'md-information-circle-outline';
             }
+            // } else if(route.name==='Details'){
+            //     iconName = focused 
+            //     ? 'cart'
+            //     : 'cart-outline'; 
+            // }
 
             return <Icon
                 type="Ionicons"
@@ -82,6 +87,7 @@ const BottomTabScreen=()=>(
     >
         <BottomTab.Screen name="Home" component={Dashboard}/>
         <BottomTab.Screen name="About Us" component={AboutScreen}/>
+        {/* <BottomTab.Screen name="Details" component={DetailScreen}/> */}
     </BottomTab.Navigator>
 )
 
@@ -109,7 +115,7 @@ export default class Navigators extends Component{
                         }
                     }/>
                      <RootStack.Screen
-                    name="Home"
+                    name="HomeSS"
                     component={HomeStackScreen}
                     options={
                         {

@@ -68,18 +68,17 @@ export default class TabDash extends Component{
                     <View style={Style.basenya} key={index}>
                         <TouchableOpacity
                         style={Style.card}
-                        onPress={this.props.navigation.navigate('Home',{
-                            screen:'DetailScreen'
-                            //,
+                        onPress={this.props.navigation.navigate('AboutScreen')}
+                        //     //,
                             // id: item.id,
                             // params:{
                             //     nama_product:nama_product,
                             //     price:price,
                             //     gambar_url:gambar_url
                             // }
-                        })
+                        // })
                             // {id: item.id}
-                        }
+                        // }
                         >
                             
                         <Image
