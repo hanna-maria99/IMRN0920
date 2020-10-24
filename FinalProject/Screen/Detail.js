@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, FlatList, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, FlatList, Image, TouchableOpacity } from 'react-native';
 import Axios from 'axios';
 import { ScrollView } from 'react-native-gesture-handler';
 import Style from '../Components/Styling';
@@ -17,7 +17,7 @@ export default class Detail extends Component{
     }
 
     getDataProduct=()=>{
-        Axios.get('http://www.json-generator.com/api/json/get/cfzEuCLnPC?indent=2')
+        Axios.get('https://next.json-generator.com/api/json/get/VJ4wGpiwY')
         .then(response=>{
             const dataProduct = response.data;
             this.setState({dataProduct});
@@ -34,7 +34,7 @@ export default class Detail extends Component{
             })}
             >
                  */}
-            <Image
+            {/* <Image
             style={Style.gambarProduct}
             source={{uri:item.gambar_url}}
             />
@@ -51,7 +51,7 @@ export default class Detail extends Component{
                     <Text style={Style.judul}>
                         {item.deskripsi}
                     </Text>
-                </View>
+                </View> */}
 
             {/* </TouchableOpacity> */}
             
@@ -60,45 +60,49 @@ export default class Detail extends Component{
 
 
     render(){
-        const {nama_product, gambar_url, price} = this.props.route.params;
-        return(
-            <ScrollView>
+        // const {nama_product} = this.props.route.params;
+        // const {gambar_url} = this.props.route.params;
+        // const {price} = this.props.route.params;
+        return(           
+            // <ScrollView>
                 <FlatList 
                 data={this.state.dataProduct}
                 renderItem=//{this.renderCard}
                 {({item, index})=>(
-                    <View style={Style.basenya} key={index}>
-                      
+                    <View style={Style.containerAbout2} 
+                    key={index}
+                    >
+                      <View style={Style.card2}>
+                          
                         <Image
-                        style={Style.gambarProduct}
-                        // source={{uri:item.gambar_url}}
-                        source={{uri:{gambar_url}}}
+                        style={Style.gambarProduct2}
+                        source={{uri:item.gambar_url}}
+                        // source={{uri:{gambar_url}}}
                         />
             
-                            <View style={Style.tulisan}>
-                                <Text style={Style.judul}>
-                                {/* {item.nama_product}    */}
-                                {nama_product}
+                            <View style={Style.tulisan2}>
+                                <Text style={Style.judul2}>
+                                {item.nama_product}   
+                                    {/* {nama_product} */}
                                 </Text>
                                 
-                                <Text style={Style.price}>
-                                    {/* {item.price} */}
-                                    {price}
+                                <Text style={Style.price2}>
+                                    {item.price}
+                                    {/* {price} */}
                                 </Text>
-
                                 
-                                <Text style={Style.judul}>
-                                    {/* {item.price} */}
+                                <Text style={Style.desc}>
                                     {item.deskripsi}
+                                    {/* {deskripsi} */}
                                 </Text>
                             </View>
-                        
+                            
+                            </View>
                     </View>
-                )
-            }
+                )}   
                 keyExtractor={(item, index) => index.toString()}
-            />
-          </ScrollView>
+            /> 
+          //</ScrollView>
         )
     }
 }

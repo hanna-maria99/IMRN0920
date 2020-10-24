@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import { Icon } from 'native-base';
+import { Icon, Root } from 'native-base';
 
 import LoginScreen from '../Screen/Login';
 import Style from '../Components/Styling';
@@ -11,6 +11,7 @@ import AboutScreen from '../Screen/About';
 import DetailScreen from '../Screen/Detail';
 import SplashScreen from '../Screen/SplashScreen';
 import TabDash from '../Screen/TabDash';
+import Detail from '../Screen/Detail';
 
 const AuthStack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
@@ -44,18 +45,10 @@ const AuthStackScreen=()=>(
 
 const MainStackScreen=()=>(
     <MainStack.Navigator>
-        <MainStack.Screen name='Btm' component={BottomTabScreen}/>
-        {/* <MainStack.Screen name='Detail' component={DetailScreen}/>
-        <MainStack.Screen name='DashTab' component={TabDash}/> */}
+        {/* <MainStack.Screen name='Btm' component={BottomTabScreen}/> */}
+        {/* <MainStack.Screen name='Detail' component={DetailScreen}/> */}
     </MainStack.Navigator>
 );
-
-const HomeStackScreen=()=>(
-    <HomeStack.Navigator>
-        <HomeStack.Screen name='tabDash' component={TabDash}/>
-        {/* <HomeStack.Screen name='Detail' component={DetailScreen}/> */}
-    </HomeStack.Navigator>
-)
 
 const BottomTabScreen=()=>(
     <BottomTab.Navigator 
@@ -73,7 +66,7 @@ const BottomTabScreen=()=>(
                 ? 'md-information-circle' 
                 : 'md-information-circle-outline';
             }
-            // } else if(route.name==='Details'){
+            // else if(route.name==='Details'){
             //     iconName = focused 
             //     ? 'cart'
             //     : 'cart-outline'; 
@@ -114,14 +107,14 @@ export default class Navigators extends Component{
                         headerShown: false
                         }
                     }/>
-                     <RootStack.Screen
+                     {/* <RootStack.Screen
                     name="HomeSS"
                     component={HomeStackScreen}
                     options={
                         {
                         headerShown: false
                         }
-                    }/>
+                    }/> */}
                     <RootStack.Screen
                     name="Bottom"
                     component={BottomTabScreen}
@@ -130,7 +123,7 @@ export default class Navigators extends Component{
                         headerShown: false
                         }
                     }/>
-                    
+{/*                     
                     <RootStack.Screen
                     name="Main"
                     component={MainStackScreen}
@@ -138,7 +131,22 @@ export default class Navigators extends Component{
                         {
                         headerShown: false
                         }
-                    }/>
+                    }/> */}
+
+                    <RootStack.Screen
+                    name="DetailScreen"
+                    component={DetailScreen}
+                    options={{
+                        title:'Detail Products'
+                    }}
+                    />
+
+                    <RootStack.Screen
+                    name="DashTab"
+                    component={TabDash}
+                    options={{
+                        headerShown:false
+                    }}/>
 
                 </RootStack.Navigator>
             </NavigationContainer>

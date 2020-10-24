@@ -200,6 +200,51 @@ export default StyleSheet.create({
         position:'relative',
         zIndex:10
     },
-   
-
+   //Detail
+   card2:{
+        flex:1,
+        alignItems: 'center',
+        padding: 25,
+        borderWidth:0.1,
+        borderRadius:3,
+        flexDirection:'column', 
+    }, 
+    gambarProduct2:{
+        height: 200,
+        aspectRatio: 1.5,
+        resizeMode: 'contain',
+        alignItems: 'center',
+        justifyContent: 'center'
+},
+    containerAbout2:{
+        backgroundColor:'white',
+        margin:20,
+        borderRadius:10,
+        height:500
+    },
+    tulisan2:{
+        flexDirection:'column',
+    },
+    judul2:{
+        flexWrap: 'wrap',
+        fontSize : 20,
+        fontWeight: "bold",
+        textAlign:'center',
+        marginTop: 20,
+    },
+    price2:{
+        flexWrap:'wrap',
+        fontWeight:'bold',
+        fontSize: 16,
+        textAlign:"center",
+        marginTop: 10,
+    },  
+    desc:{
+        textAlign:"justify",
+        fontSize : 16,
+        marginLeft: 5,
+        flexWrap: 'wrap',
+        flex:1,
+        top:10
+    }
 })

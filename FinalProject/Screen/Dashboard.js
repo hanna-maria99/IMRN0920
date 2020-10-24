@@ -32,7 +32,8 @@ export default class Dashboard extends Component{
                             flex:1,
                             flexGrow: 1}}>
                             <Container> 
-                                <TabDash/>
+                                <TabDash
+                                navigation={this.props.navigation}/>
                                 {/* <IsiTab/> */}
                             </Container>
                         </ScrollView>

@@ -18,7 +18,7 @@ export default class TabDash extends Component{
     }
 
     getDataProduct=()=>{
-        Axios.get('http://www.json-generator.com/api/json/get/cfzEuCLnPC?indent=2')
+        Axios.get('https://next.json-generator.com/api/json/get/VJ4wGpiwY')
         .then(response=>{
             const dataProduct = response.data;
             this.setState({dataProduct});
@@ -68,17 +68,24 @@ export default class TabDash extends Component{
                     <View style={Style.basenya} key={index}>
                         <TouchableOpacity
                         style={Style.card}
-                        onPress={this.props.navigation.navigate('AboutScreen')}
-                        //     //,
+                        onPress={()=>this.props.navigation.navigate('DetailScreen',{
+                            params:{
+                                // nama_product: item.nama_product,
+                                // price: item.price,
+                                // gambar_url: item.gambar_url,
+                                id:item.id
+                            }
+                        })}
+                            //,
                             // id: item.id,
                             // params:{
                             //     nama_product:nama_product,
                             //     price:price,
                             //     gambar_url:gambar_url
                             // }
-                        // })
+                            // })
                             // {id: item.id}
-                        // }
+                            // }
                         >
                             
                         <Image
